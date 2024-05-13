@@ -1,3 +1,4 @@
+import 'package:app3/pages/page2.dart';
 import 'package:flutter/material.dart';
 import 'package:app3/pages/componets/btn.dart';
 import 'package:app3/pages/page1.dart';
@@ -48,20 +49,39 @@ class Home extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: MyButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => page1(_textoController.text),
-                    ),
-                  );
-                },
-                text: 'Enviar',
+            Center(
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: MyButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => page1(_textoController.text),
+                      ),
+                    );
+                  },
+                  text: 'Enviar',
+                ),
               ),
-            )
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: MyButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Page2(),
+                      ),
+                    );
+                  },
+                  text: 'Pagina 2',
+                ),
+              ),
+            ),
           ],
         ),
       ),
